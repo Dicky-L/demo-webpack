@@ -1,6 +1,8 @@
 import _ from 'lodash'
 import printMe from './print.js'
+import './style.css'
 
+console.log('npm_package_version:',process.env.npm_package_version)
 function component() {
   var element = document.createElement('div')
   var btn = document.createElement('button')
@@ -16,4 +18,16 @@ function component() {
   return element
 }
 
-document.body.appendChild(component())
+// document.body.appendChild(component())
+let element = component()
+document.body.appendChild(element)
+
+if (module.hot) {
+  module.hot.accept('./', function() {
+    console.log('Accepting the updated printMe module')
+    // printMe()
+    document.removeChild(element)
+    element = component()
+    document.body.appendChild(element)
+  })
+}

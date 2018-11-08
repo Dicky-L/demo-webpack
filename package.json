@@ -8,7 +8,8 @@
     "build": "webpack",
     "watch": "webpack --watch",
     "start": "webpack-dev-server --open",
-    "server": "node server.js"
+    "server": "node server.js",
+    "dev-s": "node dev-server.js"
   },
   "author": "Dicky_L",
   "license": "ISC",
@@ -18,8 +19,10 @@
   },
   "devDependencies": {
     "clean-webpack-plugin": "^0.1.19",
+    "css-loader": "^1.0.1",
     "express": "^4.16.4",
     "html-webpack-plugin": "^3.2.0",
+    "style-loader": "^0.23.1",
     "webpack-cli": "^3.1.2",
     "webpack-dev-middleware": "^3.4.0",
     "webpack-dev-server": "^3.1.10"
