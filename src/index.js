@@ -1,12 +1,15 @@
-import _ from 'lodash'
+// import _ from 'lodash'
+import { cube } from './math.js'
 
 function component() {
-  var element = document.createElement('div');
+  // var element = document.createElement('div');
+  var element = document.createElement('pre')
 
   // Lodash 现在通过本script中导入
-  element.innerHTML = _.join(['Hello', 'webpack'], ' ');
+  // element.innerHTML = _.join(['Hello', 'webpack'], ' ');
+  element.innerHTML = ['Hello webpack!', '5 cubed is equal to ' + cube(5)].join('\n\n')
 
-  return element;
+  return element
 }
 
-document.body.appendChild(component());
+document.body.appendChild(component())
